@@ -1,12 +1,6 @@
 <?php
 namespace Marriland\Team_Builder;
 
-/*  MATAN: Below is the entire class for sorting Team Builder suggestions. I know we both have the same comment colour extension so I used it to our advantage:
-           Any text in RED comments means DEBUGGING ONLY code segments or instructions (there is a whole debugging template after the class, it's not neat but very simple)
-           Any text in BLUE comments means clarification/future suggestions on SUBJECTIVE decisions
-           Any text in GREEN comments means that there is an equations that is considered ADJUSTABLE OR NEEDS BALANCING
-*/
-
 class TB_Suggestions{
 
     protected $generation = 8;
