@@ -1,0 +1,212 @@
+<form id="exp-form">
+    <div id="exp-calculator" class="gen-8">
+
+        <div id="exp-calculator-user-input" class="exp-calculator-user-input">
+
+            <div class="exp-calculator-box" id="exp-generation">
+                <dl>
+                    <dt>Generation:</dt>
+                    <dd><select>
+                        <option value="8" selected="">8</option>
+                        <option value="7">7</option>
+                        <option value="6">6</option>
+                        <option value="5">5</option>
+                        <option value="4">4</option>
+                        <option value="3">3</option>
+                        <option value="2">2</option>
+                        <option value="1">1</option>
+                    </select></dd>
+                </dl>
+            </div>
+
+            <div class="exp-calculator-box gen-1 gen-2 gen-3 gen-4 gen-6" id="exp-user-level-toggle-field">
+                    <dl>
+                        <dt>Input a User Pokemon?</dt>
+                        <dd><input type="checkbox" id="exp-user-level-toggle"></dd> 
+                        <dt class="info-text">A user Pokémon is not required for this Generation. You may choose to add one to get more information.</dt>
+                    </dl>
+            </div>
+
+            <div class="exp-calculator-box gen-5 gen-7 gen-8 user-input" id="exp-user-name">
+                    <dl>
+                        <dt>User Pokémon:</dt>
+                        <dd><input type="text" placeholder="Enter your Pokémon here!"></dd>
+                    </dl>
+            </div>
+
+            <div class="exp-calculator-box gen-5 gen-7 gen-8 user-input" id="exp-user-level-field">
+                    <dl>
+                        <dt>Current Lv:</dt>
+                        <dd><input id="exp-user-level" type="number" placeholder="1-100" min="1" max="100"></dd>
+                    </dl>
+
+                    <dl id="exp-target-level-field">
+                        <dt>Target Lv:</dt>
+                        <dd><input id="exp-target-level" type="number" placeholder="1-100" min="1" max="100"></dd>
+                        <dt class="info-text">Assign a target level to get information for future levels. Some generations don't use fixed level rates.</dt>
+                    </dl>
+
+            </div>
+        </div><!-- /#exp-calculator-user-input -->
+
+        <div id="exp-calculator-enemy-input" class="exp-calculator-enemy-input">
+
+            <div class="exp-calculator-box" id="exp-enemy-name-field">
+                    <dl>
+                        <dt>Enemy Pokémon:</dt>
+                        <dd><input type="text" id="exp-enemy-name" placeholder="Enter a Pokémon here!"></dd>
+                    </dl>
+            </div>
+            
+            <div class="exp-calculator-box" id="exp-range-input-field">
+                    <dl>
+                        <dt>Use a Level Range?</dt>
+                        <dd><input type="checkbox" id="exp-range"></dd> 
+                        <dt class="info-text">This optional field allows you to input a range of levels for the enemy Pokémon. This can be useful for grinding in wild areas.</dt>
+                    </dl>
+
+            </div>
+
+            <div class="exp-calculator-box" id="exp-enemy-level-field">
+                    <dl>
+                        <dt>Enemy Lv:</dt>
+                        <dd><input id="exp-enemy-level" type="number" placeholder="1-100" min="1" max="100"></dd>
+                    </dl>
+            </div>
+
+            <div class="exp-calculator-box" id="exp-range-field">
+                    <dl>
+                        <dt>Minimum Lv:</dt>
+                        <dd><input type="number" id="exp-enemy-min" placeholder="1-100" min="1" max="100"></dd>
+                    </dl>
+
+                    <dl>
+                        <dt>Maximum Lv:</dt>
+                        <dd><input type="number" id="exp-enemy-max" placeholder="1-100" min="1" max="100"></dd>
+                    </dl>
+            </div>
+        </div><!-- /#exp-calculator-enemy-input -->
+
+        <div id="exp-calculator-modifier-input" class="exp-calculator-modifier-input">
+            <div class="exp-calculator-box" id="exp-user-modifiers">
+                <dl id="exp-traded-field" class="gen-1 gen-2 gen-3 gen-4 gen-5 gen-6 gen-7 gen-8">
+                    <dt>Traded:</dt>
+                    <dd><input type="checkbox" id="exp-traded"></dd>
+                    <dt class="info-text">This Pokémon has an OT different to your own.</dt>
+                </dl>
+
+                <dl id="exp-foreign-field" class="gen-4 gen-5 gen-6 gen-7 gen-8">
+                    <dt>Foreign:</dt>
+                    <dd><input type="checkbox" id="exp-foreign"></dd>
+                    <dt class="info-text">This Pokémon comes from a game with a different language.</dt>
+                </dl>
+
+
+                <dl id="exp-lucky-egg-field" class="gen-2 gen-3 gen-4 gen-5 gen-6 gen-7 gen-8">
+                    <dt>Lucky Egg:</dt>
+                    <dd><input type="checkbox" id="exp-lucky-egg"></dd> 
+                </dl>
+
+                <dl id="exp-exp-share-field" class="gen-2 gen-3 gen-4 gen-5 gen-6 gen-7 gen-8">
+                    <dt>Exp. Share:</dt>
+                    <dd><input type="checkbox" id="exp-exp-share"></dd> 
+                    <dt class="info-text">This may be on by default in some generations. Assumes the user Pokémon was not used.</dt>
+
+                </dl>
+
+                <dl id="exp-used-field" class="exp-share-on">
+                    <dt>Pokémon Used in Battle?</dt>
+                    <dd><input type="checkbox" id="exp-used"></dd> 
+                    <dt class="exp-share-on info-text">Check if user Pokémon WAS used in battle with an Exp. Share active.</dt>
+                </dl>
+
+                <dl id="exp-pass-power-field" class="gen-5">
+                <dt>Exp. Pass Power:</dt>
+                    <dd><select id="exp-pass-power">
+                        <option value="0" selected="">(None)</option>
+                        <option value="1">↑</option>
+                        <option value="2">↑↑</option>
+                        <option value="3">↑↑↑</option>
+                        <option value="-1">↓</option>
+                        <option value="-2">↓↓</option>
+                        <option value="-3">↓↓↓</option>
+                    </select></dd>
+                </dl>
+
+                <dl id="exp-o-power-field" class="gen-6">
+                    <dt>Exp. O-Power Level:</dt>
+                    <dd><select id="exp-o-power">
+                        <option value="0" selected="">(None)</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="3">S</option>
+                        <option value="3">MAX</option>
+                    </select></dd>
+                </dl>
+
+                <dl id="exp-rotom-power-field" class="gen-7">
+                    <dt>Roto Exp. Points:</dt>
+                    <dd><input type="checkbox" id="exp-rotom-power"></dd> 
+                </dl>
+
+                <dl id="exp-exceed-evo-field" class="gen-7 gen-8">
+                    <dt>Exceeded Evolution Level:</dt>
+                    <dd><input type="checkbox" id="exp-exceed-evo"></dd> 
+                </dl>
+
+                <dl id="exp-affection-field" class="gen-6 gen-7 gen-8">
+                    <dt>Affection Hearts:</dt>
+                    <dd>
+                        <select id="exp-affection">
+                            <option value="0" selected="">(None)</option>
+                            <option value="1">♥</option>
+                            <option value="2">♥♥</option>
+                            <option value="3">♥♥♥</option>
+                            <option value="4">♥♥♥♥</option>
+                            <option value="5">♥♥♥♥♥</option>
+                        </select>
+                    </dd>
+                </dl>
+
+                <dl id="exp-exp-charm-field" class="gen-8">
+                    <dt>Exp. Charm:</dt>
+                    <dd><input type="checkbox" id="exp-exp-charm"></dd> 
+                </dl>
+
+                <dl class="exp-calculator-box" id="exp-trainer-field" class="gen-1 gen-2 gen-3 gen-4 gen-5 gen-6">
+                    <dt>Trainer Battle:</dt>
+                    <dd><input type="checkbox" id="exp-trainer"></dd>
+                    <dt class="info-text">Check if the enemy Pokémon belongs to a trainer.</dt>
+                </dl>
+
+        
+                <input type="submit" id="exp-submit" value="Calculate">
+            </div>
+        </div><!-- /#exp-calculator-modifier-input -->
+    </div>
+</form>
+
+<div id="exp-calculator-output" class="exp-results">
+    <h2>EXP Calculation Results:</h2>
+
+    <div class="exp-results">
+        <div id="exp-output-graphics">
+            <span id="exp-user-image"></span>
+            <strong> VS </strong>
+            <span id="exp-enemy-image"></span>
+        </div>
+
+        <div>
+            <div id="exp-normal-output-text">
+                <p>Your <span class="exp-user-name-out"></span> will earn approximately <strong><span id="exp-single-win"></span> EXP</strong> from KOing the enemy <span class="exp-enemy-name-out"></span>.</p>
+                <p class="exp-user-level-output">You will need to defeat <strong><span id="exp-enemy-count"></span> <span class="exp-enemy-name-out"></span></strong> to reach <strong>Level <span class="exp-target-level-out"></span></strong>.</p>
+            </div>
+            <div id="exp-range-output-text">
+                <p>Your <span class="exp-user-name-out"></span> will earn approximately between <strong><span id="exp-min-single-win"></span> EXP</strong> and <strong><span id="exp-max-single-win"></span> EXP</strong> from KOing the enemy <span class="exp-enemy-name-out"></span>.</p>
+                <p class="exp-user-level-output">You will need to defeat between <strong><span id="exp-min-enemy-count"></span></strong> and <strong><span id="exp-max-enemy-count"></span> <span class="exp-enemy-name-out"></span></strong> to reach <strong>Level <span class="exp-target-level-out"></span></strong>.</p>
+            </div>
+        </div>
+    </div>
+
+</div><!-- /#exp-results -->

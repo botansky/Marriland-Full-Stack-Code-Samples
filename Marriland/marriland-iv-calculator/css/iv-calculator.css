@@ -1,0 +1,163 @@
+.iv-calculator-top-input {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.iv-calculator-box {
+  flex: 0 1 50%;
+  margin: 0;
+  padding: 0;
+}
+.iv-calculator-top-input .iv-calculator-box dl {
+	padding: 0;
+  padding-bottom: 0.25rem;
+	margin: 0.5rem;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.5);
+}
+.iv-calculator-box dt {
+  font-weight: bold;
+  float: left;
+}
+.iv-calculator-box dd {
+  text-align: right;
+  margin-left: 0;
+}
+@media only screen and (max-width: 700px) {
+  .iv-calculator-top-input .iv-calculator-box {
+    flex: 1 0 100%;
+  }
+}
+.iv-calculator-top-input #iv-pokemon input {
+  width: 8rem;
+}
+#iv-hidden-power {
+  display: none; /* In Gen 8, aka default */
+}
+
+.iv-level-table {
+  border: 1px solid var(--color-border);
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.iv-level-table tr.iv-ev-row {
+  display: none;
+}
+.iv-level-table tbody tr.iv-stat-row:nth-child(4n),
+.iv-level-table tbody tr.iv-stat-row:nth-child(4n-1),
+.iv-level-table tbody tr.iv-ev-row:nth-child(4n),
+.iv-level-table tbody tr.iv-ev-row:nth-child(4n-1) {
+  background: var(--color-bg-row-1);
+}
+.iv-level-table tbody tr.iv-stat-row:nth-child(4n-2),
+.iv-level-table tbody tr.iv-stat-row:nth-child(4n-3),
+.iv-level-table tbody tr.iv-ev-row:nth-child(4n-2),
+.iv-level-table tbody tr.iv-ev-row:nth-child(4n-3) {
+  background: var(--color-bg-row-2);
+}
+.iv-level-table tbody td {
+  text-align: center;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+.iv-level-table tbody tr.iv-ev-row > th {
+  text-align: right;
+  padding-right: 0.25rem;
+  font-size: 90%;
+  font-style: italic;
+}
+.iv-level-table tbody tr.iv-stat-row td {
+  border-top: 1px solid var(--color-border);
+}
+.iv-level-table tbody input[type=number] {
+  width: 2rem;
+  text-align: right;
+}
+
+/* Remove the arrows from number input fields. */
+.iv-level-table tbody input[type=number] {
+  -moz-appearance: textfield;
+}
+.iv-level-table tbody input[type=number]::-webkit-outer-spin-button,
+.iv-level-table tbody input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.iv-level-table tfoot tr {
+  background: var(--color-bg-header);
+}
+
+
+
+#iv-results {
+  display: none;
+}
+.iv-results {
+  margin-top: 1rem;
+}
+.iv-results-inner {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 700px;
+  margin: 0 auto;
+}
+/* .iv-results-inner .iv-calculator-box {
+} */
+.iv-results-inner .iv-calculator-box dl {
+  margin: 0.25rem;
+  border: 1px rgba(0, 0, 0, 0.2) solid;
+  border-bottom-width: 5px;
+  border-bottom-color: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  padding: 0.35rem 0.5rem 0.75rem 0.5rem;
+}
+.iv-results-inner #iv-result-hp {
+    background: rgba(255, 0, 0, 0.1);
+}
+.iv-results-inner #iv-result-attack {
+    background: rgba(255, 255, 0, 0.1);
+}
+.iv-results-inner #iv-result-defense {
+    background: rgba(0, 255, 0, 0.1);
+}
+.iv-results-inner #iv-result-spatk {
+    background: rgba(255, 0, 255, 0.1);
+}
+.iv-results-inner #iv-result-spdef {
+    background: rgba(0, 0, 255, 0.1);
+}
+.iv-results-inner #iv-result-speed {
+    background: rgba(0, 255, 255, 0.1);
+}
+.iv-results-inner dl dt {
+  width: 4rem;
+}
+.iv-results-inner .iv-check-at-level {
+  font-size: 85%;
+  line-height: 110%;
+  margin-top: 0.5rem;
+  font-style: italic;
+  clear: both;
+}
+.iv-results-inner .iv-check-at-level strong {
+  font-size: 110%;
+}
+.iv-results-inner .iv-check-at-level .iv-range-confirmed:before {
+  content: '\2705  ';
+  font-style: normal;
+}
+.iv-results-inner .iv-check-at-level .iv-range-error:before {
+  content: '\274C  ';
+  font-style: normal;
+}
+@media only screen and (max-width: 500px) {
+  .iv-results-inner .iv-calculator-box {
+    flex: 1 0 100%;
+  }
+}

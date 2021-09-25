@@ -1,0 +1,275 @@
+<div id="iv-calculator">
+    <form id="iv-form">
+    {# start /views/top-input.tpl #}
+    <div id="iv-calculator-top-input" class="iv-calculator-top-input">
+        <div class="iv-calculator-box" id="iv-pokemon">
+            <dl>
+                <dt>Pokémon:</dt>
+                <dd><input type="text" placeholder="Enter a Pokémon here!"></dd>
+            </dl>
+        </div>
+        
+        <div class="iv-calculator-box" id="iv-generation">
+            <dl>
+                <dt>Generation:</dt>
+                <dd><select>
+                    <option value="8" selected>8</option>
+                    <option value="7">7</option>
+                    <option value="6">6</option>
+                    <option value="5">5</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                </select></dd>
+            </dl>
+        </div>
+
+        <div class="iv-calculator-box" id="iv-nature">
+            <dl>
+                <dt>Nature:</dt>
+                <dd><select>
+                    <option value="none" selected>(Ignore)</option>
+                    <optgroup label="+Attack">
+                        <option value="lonely" data-nature-raise="attack" data-nature-lower="defense">Lonely (-Def)</option>
+                        <option value="adamant" data-nature-raise="attack" data-nature-lower="spatk">Adamant (-SAt)</option>
+                        <option value="naughty" data-nature-raise="attack" data-nature-lower="spdef">Naughty (-SDf)</option>
+                        <option value="brave" data-nature-raise="attack" data-nature-lower="speed">Brave (-Spd)</option>
+                    </optgroup>
+                    <optgroup label="+Defense">
+                        <option value="bold" data-nature-raise="defense" data-nature-lower="attack">Bold (-Atk)</option>
+                        <option value="impish" data-nature-raise="defense" data-nature-lower="spatk">Impish (-SAt)</option>
+                        <option value="lax" data-nature-raise="defense" data-nature-lower="spdef">Lax (-SDf)</option>
+                        <option value="relaxed" data-nature-raise="defense" data-nature-lower="speed">Relaxed (-Spd)</option>
+                    </optgroup>
+                    <optgroup label="+Sp. Atk">
+                        <option value="modest" data-nature-raise="spatk" data-nature-lower="attack">Modest (-Atk)</option>
+                        <option value="mild" data-nature-raise="spatk" data-nature-lower="defense">Mild (-Def)</option>
+                        <option value="rash" data-nature-raise="spatk" data-nature-lower="spdef">Rash (-SDf)</option>
+                        <option value="quiet" data-nature-raise="spatk" data-nature-lower="speed">Quiet (-Spd)</option>
+                    </optgroup>
+                    <optgroup label="+Sp. Def">
+                        <option value="calm" data-nature-raise="spdef" data-nature-lower="attack">Calm (-Atk)</option>
+                        <option value="gentle" data-nature-raise="spdef" data-nature-lower="defense">Gentle (-Def)</option>
+                        <option value="careful" data-nature-raise="spdef" data-nature-lower="spatk">Careful (-SAt)</option>
+                        <option value="sassy" data-nature-raise="spdef" data-nature-lower="speed">Sassy (-Spd)</option>
+                    </optgroup>
+                    <optgroup label="+Speed">
+                        <option value="timid" data-nature-raise="speed" data-nature-lower="attack">Timid (-Atk)</option>
+                        <option value="hasty" data-nature-raise="speed" data-nature-lower="defense">Hasty (-Def)</option>
+                        <option value="jolly" data-nature-raise="speed" data-nature-lower="spatk">Jolly (-SAt)</option>
+                        <option value="naive" data-nature-raise="speed" data-nature-lower="spdef">Naive (-SDf)</option>
+                    </optgroup>
+                    <optgroup label="Neutral">
+                        <option value="hardy">Hardy</option>
+                        <option value="docile">Docile</option>
+                        <option value="bashful">Bashful</option>
+                        <option value="quirky">Quirky</option>
+                        <option value="serious">Serious</option>
+                    </optgroup>
+                </select></dd>
+            </dl>
+        </div>
+
+        <div id="iv-characteristic" class="iv-calculator-box">
+            <dl>
+                <dt>Characteristic:</dt>
+                <dd><select>
+                    <option value="none">(Ignore)</option>
+                    <option value="attack-2-7">A little quick tempered</option>
+                    <option value="speed-1-6" class="for-perfect-iv">Alert to sounds</option>
+                    <option value="defense-1-6" class="for-perfect-iv">Capable of taking hits</option>
+                    <option value="defense-3-8">Good endurance</option>
+                    <option value="defense-4-9">Good perserverance</option>
+                    <option value="spdef-3-8">Hates to lose</option>
+                    <option value="spatk-0-5">Highly curious</option>
+                    <option value="defense-2-7">Highly persistent</option>
+                    <option value="speed-2-7">Impetuous and silly</option>
+                    <option value="attack-3-8">Likes to fight</option>
+                    <option value="hp-4-9">Likes to relax</option>
+                    <option value="speed-0-5">Likes to run</option>
+                    <option value="attack-1-6" class="for-perfect-iv">Likes to thrash about</option>
+                    <option value="hp-0-5">Loves to eat</option>
+                    <option value="spatk-1-6" class="for-perfect-iv">Mischievous</option>
+                    <option value="hp-2-7" class="only-gen-6-onward">Nods off a lot</option>
+                    <option value="hp-1-6" class="only-gen-4-5 for-perfect-iv">Often dozes off</option>
+                    <option value="spatk-3-8">Often lost in thought</option>
+                    <option value="hp-2-7" class="only-gen-4-5">Often scatters things</option>
+                    <option value="attack-0-5">Proud of its power</option>
+                    <option value="attack-4-9">Quick tempered</option>
+                    <option value="speed-4-9">Quick to flee</option>
+                    <option value="hp-3-8">Scatters things often</option>
+                    <option value="speed-3-8">Somewhat of a clown</option>
+                    <option value="spdef-4-9">Somewhat stubborn</option>
+                    <option value="spdef-1-6" class="for-perfect-iv">Somewhat vain</option>
+                    <option value="spdef-0-5">Strong willed</option>
+                    <option value="spdef-2-7">Strongly defiant</option>
+                    <option value="defense-0-5">Sturdy body</option>
+                    <option value="hp-1-6" class="only-gen-6-onward for-perfect-iv">Takes plenty of siestas</option>
+                    <option value="spatk-2-7">Thoroughly cunning</option>
+                    <option value="spatk-4-9">Very finicky</option>
+                </select></dd>
+            </dl>
+        </div>
+
+        <div id="iv-hidden-power" class="iv-calculator-box">
+            <dl>
+                <dt>Hidden Power Type:</dt>
+                <dd><select>
+                    <option value="none">(Unknown)</option>
+                    <option value="bug">Bug</option>
+                    <option value="dark">Dark</option>
+                    <option value="dragon">Dragon</option>
+                    <option value="electric">Electric</option>
+                    <option value="fighting">Fighting</option>
+                    <option value="fire">Fire</option>
+                    <option value="flying">Flying</option>
+                    <option value="ghost">Ghost</option>
+                    <option value="grass">Grass</option>
+                    <option value="ground">Ground</option>
+                    <option value="ice">Ice</option>
+                    <option value="poison">Poison</option>
+                    <option value="psychic">Psychic</option>
+                    <option value="rock">Rock</option>
+                    <option value="steel">Steel</option>
+                    <option value="water">Water</option>
+                </select></dd>
+            </dl>
+        </div>
+
+        <div class="iv-calculator-box">
+            <dl>
+                <dt><label for="iv-input-evs">Input EVs?</label></dt>
+                <dd><input type="checkbox" id="iv-input-evs"></dd>
+            </dl>
+        </div>
+    </div>
+    {# end /views/top-input.tpl.html #}
+
+    {# start /views/level-input.tpl.html #}
+    <table id="iv-level-table" class="iv-level-table">
+        <thead>
+            <tr>
+                <th class="rowH">Lv.</th>
+                <th class="rowH">HP</th>
+                <th class="rowH">Atk</th>
+                <th class="rowH">Def</th>
+                <th class="rowH">SAt</th>
+                <th class="rowH">SDf</th>
+                <th class="rowH">Spd</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="iv-stat-row" data-row="1">
+                <th class="rowH"><input type="number" class="iv-input-level" min="1" max="100"></th>
+                <td><input type="number" class="iv-input-hp" min="1"></td>
+                <td><input type="number" class="iv-input-attack" min="1"></td>
+                <td><input type="number" class="iv-input-defense" min="1"></td>
+                <td><input type="number" class="iv-input-spatk" min="1"></td>
+                <td><input type="number" class="iv-input-spdef" min="1"></td>
+                <td><input type="number" class="iv-input-speed" min="1"></td>
+            </tr>
+            <tr class="iv-ev-row" data-row="1">
+                <th class="rowH">EVs:</th>
+                <td><input type="number" class="iv-input-ev-hp ev-cell" min="0" max="255"></td>
+                <td><input type="number" class="iv-input-ev-attack ev-cell" min="0" max="255"></td>
+                <td><input type="number" class="iv-input-ev-defense ev-cell" min="0" max="255"></td>
+                <td><input type="number" class="iv-input-ev-spatk ev-cell" min="0" max="255"></td>
+                <td><input type="number" class="iv-input-ev-spdef ev-cell" min="0" max="255"></td>
+                <td><input type="number" class="iv-input-ev-speed ev-cell" min="0" max="255"></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="7">
+                    <button type="button" id="iv-add-row">+ Add a Row</button> <input type="submit" id="iv-submit" value="Calculate">
+                </th>
+            </tr>
+        </tfoot>
+    </table>
+    {# end /views/level-input.tpl.html #}
+    </form>
+
+    {# start /views/results.tpl.html #}
+    <div id="iv-results" class="iv-results">
+        <h2>IV Calculation Results</h2>
+
+        <div class="iv-results-inner">
+            <div class="iv-calculator-box">
+                <dl id="iv-result-hp">
+                    <dt>HP:</dt>
+                    <dd>
+                        <div class="iv-possible-values"></div>
+                        <div class="iv-check-at-level"></div>
+                    </dd>
+                </dl>
+            </div>
+            <div class="iv-calculator-box">
+                <dl id="iv-result-attack">
+                    <dt>Attack:</dt>
+                    <dd>
+                        <div class="iv-possible-values"></div>
+                        <div class="iv-check-at-level"></div>
+                    </dd>
+                </dl>
+            </div>
+            <div class="iv-calculator-box">
+                <dl id="iv-result-defense">
+                    <dt>Defense:</dt>
+                    <dd>
+                        <div class="iv-possible-values"></div>
+                        <div class="iv-check-at-level"></div>
+                    </dd>
+                </dl>
+            </div>
+            <div class="iv-calculator-box">
+                <dl id="iv-result-spatk">
+                    <dt>Sp. Atk:</dt>
+                    <dd>
+                        <div class="iv-possible-values"></div>
+                        <div class="iv-check-at-level"></div>
+                    </dd>
+                </dl>
+            </div>
+            <div class="iv-calculator-box">
+                <dl id="iv-result-spdef">
+                    <dt>Sp. Def:</dt>
+                    <dd>
+                        <div class="iv-possible-values"></div>
+                        <div class="iv-check-at-level"></div>
+                    </dd>
+                </dl>
+            </div>
+            <div class="iv-calculator-box">
+                <dl id="iv-result-speed">
+                    <dt>Speed:</dt>
+                    <dd>
+                        <div class="iv-possible-values"></div>
+                        <div class="iv-check-at-level"></div>
+                    </dd>
+                </dl>
+            </div>
+        </div><!-- /#iv-results-inner -->
+    </div><!-- /#iv-results -->
+    {# end /views/results.tpl #}
+</div>
+
+{# This template can be used with jQuery .append() or .appendTo() #}
+<template id="iv-input-level-row">
+            <tr class="iv-stat-row" data-row="">
+                <th class="rowH"><input type="number" class="iv-input-level"></th>
+                <td><input type="number" class="iv-input-hp" min="1"></td>
+                <td><input type="number" class="iv-input-attack" min="1"></td>
+                <td><input type="number" class="iv-input-defense" min="1"></td>
+                <td><input type="number" class="iv-input-spatk" min="1"></td>
+                <td><input type="number" class="iv-input-spdef" min="1"></td>
+                <td><input type="number" class="iv-input-speed" min="1"></td>
+            </tr>
+            <tr class="iv-ev-row" data-row="">
+                <th class="rowH">EVs:</th>
+                <td><input type="number" class="iv-input-ev-hp ev-cell" min="0" max="255"></td>
+                <td><input type="number" class="iv-input-ev-attack ev-cell" min="0" max="255"></td>
+                <td><input type="number" class="iv-input-ev-defense ev-cell" min="0" max="255"></td>
+                <td><input type="number" class="iv-input-ev-spatk ev-cell" min="0" max="255"></td>
+                <td><input type="number" class="iv-input-ev-spdef ev-cell" min="0" max="255"></td>
+                <td><input type="number" class="iv-input-ev-speed ev-cell" min="0" max="255"></td>
+            </tr>
+</template>

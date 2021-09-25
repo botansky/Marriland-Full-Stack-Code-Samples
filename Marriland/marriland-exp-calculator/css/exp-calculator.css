@@ -1,0 +1,164 @@
+#exp-calculator {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.exp-calculator-user-input input[type=number],
+.exp-calculator-enemy-input input[type=number]{
+  width: 4rem;
+}
+
+.exp-calculator-user-input {
+  flex: 0 1 50%;
+  background: var(--color-bg-row-2);
+/*   margin: 0.25rem;
+  border: 1px rgba(0, 0, 0, 0.2) solid;
+  border-bottom-width: 5px;
+  border-bottom-color: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  padding: 0.35rem 0.5rem 0.75rem 0.5rem;
+  background: var(--color-bg-header); */
+}
+
+.exp-calculator-enemy-input {
+  flex: 0 1 50%;
+  background: var(--color-bg-row-1);
+/*   margin: 0.25rem;
+  border: 1px rgba(0, 0, 0, 0.2) solid;
+  border-bottom-width: 5px;
+  border-bottom-color: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  padding: 0.35rem 0.5rem 0.75rem 0.5rem;
+  background: var(--color-bg-row-1); */
+}
+
+.exp-calculator-modifier-input {
+  flex: 0 1 100%;
+/*   margin: 0.25rem;
+  border: 1px rgba(0, 0, 0, 0.2) solid;
+  border-bottom-width: 5px;
+  border-bottom-color: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  padding: 0.35rem 0.5rem 0.75rem 0.5rem;
+  background: var(--color-bg-row-2); */
+}
+
+#exp-user-modifiers {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0;
+  align-items: start;
+}
+
+.exp-calculator-modifier-input dl {
+  flex: 1 1 45%;
+}
+.exp-calculator-box dl dd,
+.exp-calculator-box dl dt {
+  margin-top: 0rem;
+  padding: 0rem;
+}
+.exp-calculator-box dl dt {
+  padding-bottom: 0.25rem;
+}
+#exp-submit {
+  flex: 0 1 100%;
+}
+
+.exp-calculator-box {
+  flex: 0 1 50%;
+  margin: 0;
+  padding: 0;
+  /* background: var(--color-bg-row-1); */
+}
+
+.exp-calculator-user-input .exp-calculator-box dl,
+.exp-calculator-enemy-input .exp-calculator-box dl,
+.exp-calculator-modifier-input .exp-calculator-box dl {
+  padding: 0;
+  padding-bottom: 0.25rem;
+  margin: 0.5rem;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.5);
+}
+
+.exp-calculator-box dt {
+  font-weight: bold;
+  float: left;
+}
+.exp-calculator-box dd {
+  text-align: right;
+  margin-left: 0;
+}
+
+.exp-calculator-box input[type=text] {
+  width: 8rem;
+}
+
+/* hide output on default */
+#exp-output-graphics,
+#exp-normal-output-text,
+#exp-range-output-text,
+#exp-user-level-toggle-field,
+.exp_share_on,
+#exp-range-field,
+#exp-pass-power-field,
+#exp-o-power-field,
+#exp-rotom-power-field,
+#exp-trainer-field {
+  display: none;
+}
+
+#exp-calculator .gen-1,
+#exp-calculator .gen-2,
+#exp-calculator .gen-3,
+#exp-calculator .gen-4,
+#exp-calculator .gen-5,
+#exp-calculator .gen-6,
+#exp-calculator .gen-7,
+#exp-calculator .gen-8
+{
+  display: none;
+}
+
+
+#exp-calculator.gen-1 .gen-1,
+#exp-calculator.gen-2 .gen-2,
+#exp-calculator.gen-3 .gen-3,
+#exp-calculator.gen-4 .gen-4,
+#exp-calculator.gen-5 .gen-5,
+#exp-calculator.gen-6 .gen-6,
+#exp-calculator.gen-7 .gen-7,
+#exp-calculator.gen-8 .gen-8,
+#exp-calculator.gen-8 .user-input
+{
+  display: block;
+}
+
+
+@media only screen and (max-width: 700px) {
+  .exp-calculator-box dl dd,
+  .exp-calculator-box dl dt {
+    margin-top: 0.25rem;
+    padding: 0.25rem;
+  }
+  
+  .exp-calculator-user-input,
+  .exp-calculator-enemy-input,
+  .exp-calculator-modifier-input dl {
+    flex: 1 0 100%;
+  }
+
+  .exp-calculator-user-input .exp-calculator-box dl,
+  .exp-calculator-enemy-input .exp-calculator-box dl,
+  .exp-calculator-modifier-input .exp-calculator-box dl {
+    margin: 0;
+  }
+}
+
+.exp-calculator-box .info-text {
+  font-size: 90%;
+  font-family: var(--font-family-condensed);
+  flex: 1 0 100;
+  font-weight: lighter;
+  clear: both;
+}
